@@ -5,6 +5,7 @@ import android.graphics.Canvas;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.RelativeLayout;
 
 import com.ldf.calendar.component.State;
@@ -42,6 +43,7 @@ public abstract class DayView extends RelativeLayout implements IDayRenderer {
      */
     private void setupLayoutResource(int layoutResource) {
         View inflated = LayoutInflater.from(getContext()).inflate(layoutResource, this);
+        inflated.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT));
         inflated.measure(MeasureSpec.makeMeasureSpec(0, MeasureSpec.UNSPECIFIED),
                 MeasureSpec.makeMeasureSpec(0, MeasureSpec.UNSPECIFIED));
         inflated.layout(0, 0, getMeasuredWidth(), getMeasuredHeight());
