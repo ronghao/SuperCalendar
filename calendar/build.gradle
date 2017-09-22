@@ -4,7 +4,7 @@ apply plugin:'com.github.dcendents.android-maven'
 group='com.github.MagicMashRoom'
 android {
     compileSdkVersion 23
-    buildToolsVersion "25.0.0"
+    buildToolsVersion "25.0.3"
 
     defaultConfig {
         minSdkVersion 17

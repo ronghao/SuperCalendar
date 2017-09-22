@@ -149,7 +149,7 @@ public class SyllabusActivity extends AppCompatActivity {
      */
     private void initCalendarView() {
         initListener();
-        CustomDayView customDayView = new CustomDayView(context, R.layout.custom_day);
+        LianChengDayView customDayView = new LianChengDayView(context);
         calendarAdapter = new CalendarViewAdapter(
                 context,
                 onSelectDateListener,
@@ -166,9 +166,9 @@ public class SyllabusActivity extends AppCompatActivity {
      */
     private void initMarkData() {
         HashMap<String, String> markData = new HashMap<>();
-        markData.put("2017-8-9", "1");
+        markData.put("2017-8-9", "0");
         markData.put("2017-7-9", "0");
-        markData.put("2017-6-9", "1");
+        markData.put("2017-6-9", "0");
         markData.put("2017-6-10", "0");
         calendarAdapter.setMarkData(markData);
     }
